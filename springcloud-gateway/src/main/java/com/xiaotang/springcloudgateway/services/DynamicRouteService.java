@@ -21,6 +21,7 @@ public class DynamicRouteService implements ApplicationEventPublisherAware {
 
     @Autowired
     private RouteDefinitionWriter routeDefinitionWriter;
+
     private ApplicationEventPublisher publisher;
 
     //增加路由
