@@ -10,20 +10,21 @@ spring:
         server-addr: 127.0.0.1:8848
 #      config:
 #        server-addr: 127.0.0.1:8848
-    gateway:
-      routes:
-        - id: nacos-server-router
-          uri: lb://nacos-server
-          predicates:
-            - Path=/nacos-server/**
-          filters:
-          # 前缀过滤，默认配置下，我们的请求路径是 http://localhost:9000/myshop-service-consumer-item/** 这时会路由到指定的服务
-          # 此处配置去掉 1 个路径前缀，再配置上面的 Path=/api/**，就能按照 http://localhost:9000/api/** 的方式访问了
-            - StripPrefix=1
+#    gateway:
+#      routes:
+#        - id: nacos-server-router
+#          uri: lb://nacos-server
+#          predicates:
+#            - Path=/nacos-server/**
+#          filters:
+#          # 前缀过滤，默认配置下，我们的请求路径是 http://localhost:9000/myshop-service-consumer-item/** 这时会路由到指定的服务
+#          # 此处配置去掉 1 个路径前缀，再配置上面的 Path=/api/**，就能按照 http://localhost:9000/api/** 的方式访问了
+#            - StripPrefix=1
 #      discovery:
 #        locator:
 #          enabled: true
-#          lowerCaseServiceId: true
+#          lower-case-service-id: true
+
 #management:
 #  endpoints:
 #    web:
