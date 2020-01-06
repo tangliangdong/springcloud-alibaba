@@ -16,6 +16,9 @@ spring:
 mybatis:
   mapper-locations: classpath:/mapper/*.xml
   type-aliases-package: com.xiaotang.springorder
+  configuration:
+    interceptors:
+      - com.xiaotang.springorder.interceptor.InsertInterceptor
 
 
 logging:

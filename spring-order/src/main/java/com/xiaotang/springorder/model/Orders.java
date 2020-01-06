@@ -1,13 +1,13 @@
 package com.xiaotang.springorder.model;
 
-import org.apache.ibatis.annotations.Update;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.Id;
+import com.xiaotang.springorder.annotation.CreateTime;
+import com.xiaotang.springorder.annotation.UUID;
+import com.xiaotang.springorder.annotation.UpdateTime;
 
 import java.util.Date;
 
 public class Orders {
-    @Id
+    @UUID
     private String uuid;
 
     private String goodsName;
@@ -18,9 +18,10 @@ public class Orders {
 
     private String username;
 
-    @CreatedDate
+    @CreateTime
     private Date ctime;
 
+    @UpdateTime
     private Date utime;
 
     private Short status;
