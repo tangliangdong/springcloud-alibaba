@@ -1,8 +1,13 @@
 package com.xiaotang.springorder.model;
 
+import org.apache.ibatis.annotations.Update;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.Id;
+
 import java.util.Date;
 
 public class Orders {
+    @Id
     private String uuid;
 
     private String goodsName;
@@ -13,6 +18,7 @@ public class Orders {
 
     private String username;
 
+    @CreatedDate
     private Date ctime;
 
     private Date utime;

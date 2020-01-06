@@ -21,4 +21,8 @@ public class OrdersService {
     public List<Orders> getList(){
         return ordersMapper.getList();
     }
+
+    public Integer add(Orders orders){
+        return ordersMapper.insert(orders);
+    }
 }

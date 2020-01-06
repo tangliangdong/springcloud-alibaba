@@ -23,6 +23,12 @@ public class OrderController {
 
     @PostMapping("list")
     public List<Orders> getOrdersList(){
+        System.out.println("你好世界");
         return ordersService.getList();
+    }
+
+    @PostMapping("add")
+    public Integer add(Orders orders){
+        return ordersService.add(orders);
     }
 }
