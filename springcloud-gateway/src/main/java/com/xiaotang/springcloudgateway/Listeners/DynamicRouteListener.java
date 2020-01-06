@@ -24,24 +24,27 @@ public class DynamicRouteListener {
     private DynamicRouteService dynamicRouteService;
 
     public DynamicRouteListener() {
-        dynamicRouteByNacosListener("gateway.yaml","DEFAULT_GROUP");
+        dynamicRouteByNacosListener("gateway.yaml", "DEFAULT_GROUP");
     }
+
     /**
      * 监听Nacos Server下发的动态路由配置
+     *
      * @param dataId
      * @param group
      */
-    public void dynamicRouteByNacosListener (String dataId, String group){
+    public void dynamicRouteByNacosListener(String dataId, String group) {
         try {
-            ConfigService configService= NacosFactory.createConfigService("127.0.0.1:8848");
+            ConfigService configService = NacosFactory.createConfigService("127.0.0.1:8848");
             String content = configService.getConfig(dataId, group, 5000);
             System.out.println(content);
-            configService.addListener(dataId, group, new Listener()  {
+            configService.addListener(dataId, group, new Listener() {
                 @Override
                 public void receiveConfigInfo(String configInfo) {
-                    RouteDefinition definition= JSON.parseObject(configInfo,RouteDefinition.class);
+                    RouteDefinition definition = JSON.parseObject(configInfo, RouteDefinition.class);
                     dynamicRouteService.update(definition);
                 }
+
                 @Override
                 public Executor getExecutor() {
                     return null;

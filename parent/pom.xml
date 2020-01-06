@@ -22,6 +22,8 @@
         <module>../springserver</module>
         <module>../nacos-client</module>
         <module>../springcloud-gateway</module>
+        <module>../springcloud-gateway-config</module>
+        <module>../spring-order</module>
     </modules>
 
     <dependencies>

@@ -18,27 +18,27 @@ import java.util.Map;
 public class OpenController {
 
     @GetMapping("login")
-    public String login(String name){
+    public String login(String name) {
         return name + "do login";
     }
 
     @GetMapping("/byResource")
-    @SentinelResource(value = "byResource",blockHandler = "handleException")
+    @SentinelResource(value = "byResource", blockHandler = "handleException")
     public String byResource() {
         return "按资源名称限流";
     }
 
     @GetMapping("/byUrl")
-    @SentinelResource(value = "byUrl",blockHandler = "handleException")
+    @SentinelResource(value = "byUrl", blockHandler = "handleException")
     public String byUrl() {
-        return"按url限流";
+        return "按url限流";
     }
 
 
     @SentinelResource("resource")
     @RequestMapping("/sentinel/hello")
-    public Map<String,Object> hello(String appName){
-        Map<String,Object> map=new HashMap<>(2);
+    public Map<String, Object> hello(String appName) {
+        Map<String, Object> map = new HashMap<>(2);
         map.put("appName", appName);
         map.put("method", "hello");
         return map;
@@ -46,20 +46,20 @@ public class OpenController {
 
 
     @RequestMapping("/sentinel/test")
-    public Map<String,Object> test(String appName){
-        Map<String,Object> map=new HashMap<>(2);
-        map.put("appName",appName);
-        map.put("method","test");
+    public Map<String, Object> test(String appName) {
+        Map<String, Object> map = new HashMap<>(2);
+        map.put("appName", appName);
+        map.put("method", "test");
         return map;
     }
 
     @SentinelResource(value = "resource2", blockHandler = "handleException", blockHandlerClass = {ExceptionUtil.class})
     @RequestMapping("/sentinel/test2")
-    public Map<String,Object> test2() {
-        Map<String,Object> map=new HashMap<>();
-        map.put("method","test2");
-        map.put("msg","自定义限流逻辑处理");
-        return  map;
+    public Map<String, Object> test2() {
+        Map<String, Object> map = new HashMap<>();
+        map.put("method", "test2");
+        map.put("msg", "自定义限流逻辑处理");
+        return map;
     }
 
 }

@@ -22,7 +22,7 @@ public class OpenController {
     LoadBalancerClient loadBalancerClient;
 
     @GetMapping("login")
-    public String login(String name){
+    public String login(String name) {
         ServiceInstance serviceInstance = loadBalancerClient.choose("nacos-server");
         String url = serviceInstance.getUri() + "/open/login?name=" + name;
         RestTemplate restTemplate = new RestTemplate();
