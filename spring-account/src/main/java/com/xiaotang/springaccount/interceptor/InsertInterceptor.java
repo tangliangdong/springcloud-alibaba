@@ -1,5 +1,6 @@
 package com.xiaotang.springaccount.interceptor;
 
+import com.xiaotang.commonpart.annotation.UUID;
 import org.apache.commons.lang.reflect.FieldUtils;
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.MappedStatement;
@@ -11,6 +12,8 @@ import java.beans.PropertyDescriptor;
 import java.lang.reflect.Field;
 import java.util.Calendar;
 import java.util.Properties;
+import com.xiaotang.commonpart.annotation.CreateTime;
+import com.xiaotang.commonpart.annotation.UpdateTime;
 
 /**
  * @author Administrator
