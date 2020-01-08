@@ -1,7 +1,8 @@
 package com.xiaotang.springorder.interceptor;
 
-import com.xiaotang.springorder.annotation.CreateTime;
-import com.xiaotang.springorder.annotation.UpdateTime;
+import com.xiaotang.commonpart.annotation.CreateTime;
+import com.xiaotang.commonpart.annotation.UUID;
+import com.xiaotang.commonpart.annotation.UpdateTime;
 import org.apache.commons.lang3.reflect.FieldUtils;
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.MappedStatement;
@@ -13,7 +14,6 @@ import java.beans.PropertyDescriptor;
 import java.lang.reflect.Field;
 import java.util.Calendar;
 import java.util.Properties;
-import com.xiaotang.springorder.annotation.UUID;
 
 /**
  * @author Administrator

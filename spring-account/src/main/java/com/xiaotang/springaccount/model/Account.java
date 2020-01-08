@@ -1,8 +1,13 @@
 package com.xiaotang.springaccount.model;
 
+import com.xiaotang.commonpart.annotation.CreateTime;
+import com.xiaotang.commonpart.annotation.UUID;
+import com.xiaotang.commonpart.annotation.UpdateTime;
+
 import java.util.Date;
 
 public class Account {
+    @UUID
     private String uuid;
 
     private String username;
@@ -13,8 +18,10 @@ public class Account {
 
     private Short status;
 
+    @CreateTime
     private Date ctime;
 
+    @UpdateTime
     private Date utime;
 
     public String getUuid() {

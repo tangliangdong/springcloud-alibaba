@@ -28,7 +28,13 @@ public class OrderController {
     }
 
     @PostMapping("add")
-    public Integer add(Orders orders){
+    public Integer add(String goodsName, Integer price, Integer num, String username){
+        Orders orders = new Orders();
+        orders.setUsername(username);
+        orders.setGoodsName(goodsName);
+        orders.setPrice(price);
+        orders.setNum(num);
+
         return ordersService.add(orders);
     }
 }

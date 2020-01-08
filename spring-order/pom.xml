@@ -81,6 +81,13 @@
             <scope>true</scope>
         </dependency>
 
+
+        <dependency>
+            <groupId>com.xiaotang</groupId>
+            <artifactId>common-part</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>

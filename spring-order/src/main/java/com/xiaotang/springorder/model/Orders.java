@@ -1,8 +1,8 @@
 package com.xiaotang.springorder.model;
 
-import com.xiaotang.springorder.annotation.CreateTime;
-import com.xiaotang.springorder.annotation.UUID;
-import com.xiaotang.springorder.annotation.UpdateTime;
+import com.xiaotang.commonpart.annotation.CreateTime;
+import com.xiaotang.commonpart.annotation.UUID;
+import com.xiaotang.commonpart.annotation.UpdateTime;
 
 import java.util.Date;
 
