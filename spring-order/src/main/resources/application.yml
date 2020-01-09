@@ -8,6 +8,10 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+    # seata 服务分组，要与服务端nacos-config.txt中service.vgroup_mapping的后缀对应
+    alibaba:
+      seata:
+        tx-service-group: order-service-fescar-service-group
   datasource:
     url: jdbc:mysql://116.62.14.208:3306/order?useUnicode=true&amp;characterEncoding=utf8
     driver-class-name: com.mysql.jdbc.Driver
