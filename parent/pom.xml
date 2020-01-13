@@ -25,6 +25,7 @@
         <module>../springcloud-gateway-config</module>
         <module>../spring-order</module>
         <module>../spring-account</module>
+        <module>../spring-storage</module>
     </modules>
 
     <dependencies>

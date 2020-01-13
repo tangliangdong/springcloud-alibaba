@@ -1,6 +1,7 @@
 package com.xiaotang.springaccount.service;
 
 import com.xiaotang.springaccount.consumer.OrdersClient;
+import com.xiaotang.springaccount.consumer.StorageClient;
 import com.xiaotang.springaccount.dao.AccountMapper;
 import com.xiaotang.springaccount.model.Account;
 import io.seata.spring.annotation.GlobalTransactional;
@@ -22,17 +23,21 @@ public class AccountService {
     @Autowired
     private OrdersClient ordersClient;
 
+    @Autowired
+    private StorageClient storageClient;
+
     public Integer add(Account account){
         return accountMapper.insert(account);
     }
 
-    @GlobalTransactional(rollbackFor = Exception.class)
+    @GlobalTransactional
     @Transactional(rollbackFor = Exception.class)
     public Integer addTest(Account account){
 
         ordersClient.add("banana", 2, 1, account.getUsername());
+        storageClient.add("apple", 3);
         Integer index = add(account);
-        throw new RuntimeException();
-//        return index;
+//        throw new RuntimeException("你好世界");
+        return index;
     }
 }

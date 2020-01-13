@@ -1,9 +1,9 @@
 server:
-  port: 8021
+  port: 8030
 
 spring:
   application:
-    name: account-server
+    name: storage-server
   cloud:
     nacos:
       discovery:
@@ -11,18 +11,19 @@ spring:
     # seata 服务分组，要与服务端nacos-config.txt中service.vgroup_mapping的后缀对应
     alibaba:
       seata:
-        tx-service-group: account-service-group
+        tx-service-group: storage-service-group
   datasource:
-    url: jdbc:mysql://116.62.14.208:3306/account?characterEncoding=utf8
+    url: jdbc:mysql://116.62.14.208:3306/storage?characterEncoding=utf8
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: 123456
 mybatis:
-  mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.xiaotang.springaccount
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: com.xiaotang.springstorage
 #  configuration:
 #    interceptors:
 #      - com.xiaotang.springorder.interceptor.InsertInterceptor
+
 
 
 logging:

@@ -1,7 +1,6 @@
-//package com.xiaotang.springaccount.config;
+//package com.xiaotang.springstorage.config;
 //
-//import com.xiaotang.springaccount.interceptor.InsertInterceptor;
-//import org.mybatis.spring.annotation.MapperScan;
+//import com.xiaotang.springstorage.interceptor.InsertInterceptor;
 //import org.springframework.context.annotation.Bean;
 //import org.springframework.context.annotation.Configuration;
 //
@@ -11,7 +10,6 @@
 // * @time 9:14
 // */
 //@Configuration
-//@MapperScan("com.xiaotang.springaccount.dao")
 //public class MybatisConfiguration {
 //
 //    @Bean
