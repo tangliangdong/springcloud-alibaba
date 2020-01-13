@@ -23,11 +23,11 @@ public class OrdersService {
         return ordersMapper.getList();
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public Integer add(Orders orders){
         Integer index = ordersMapper.insert(orders);
         System.out.println("你好世界");
-        throw new RuntimeException();
-//        return index;
+//        throw new RuntimeException();
+        return index;
     }
 }

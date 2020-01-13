@@ -26,11 +26,13 @@ public class AccountService {
         return accountMapper.insert(account);
     }
 
-    @GlobalTransactional
+    @GlobalTransactional(rollbackFor = Exception.class)
     @Transactional(rollbackFor = Exception.class)
     public Integer addTest(Account account){
-        Integer index = add(account);
+
         ordersClient.add("banana", 2, 1, account.getUsername());
-        return index;
+        Integer index = add(account);
+        throw new RuntimeException();
+//        return index;
     }
 }

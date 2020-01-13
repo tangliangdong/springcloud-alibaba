@@ -11,7 +11,7 @@ spring:
     # seata 服务分组，要与服务端nacos-config.txt中service.vgroup_mapping的后缀对应
     alibaba:
       seata:
-        tx-service-group: account-service-fescar-service-group
+        tx-service-group: account-service-group
   datasource:
     url: jdbc:mysql://116.62.14.208:3306/account?characterEncoding=utf8
     driver-class-name: com.mysql.jdbc.Driver
