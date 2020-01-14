@@ -38,8 +38,9 @@ public class AccountService {
     @Transactional
     public Integer updateTest(Account account, Integer status){
         Integer index = update(account);
-        ordersClient.update("a6ee33c562bf46739e59c0353912eefc", "apple23",2223);
         storageClient.update("bc3a5eddb2e146a3b97a5b2e7a40582e", "apple2", 123);
+        ordersClient.update("a6ee33c562bf46739e59c0353912eefc", "apple23",2223);
+
         if(status == 0){
             throw new RuntimeException("hello world");
         }

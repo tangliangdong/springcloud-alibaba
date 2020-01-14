@@ -1,4 +1,4 @@
-package com.xiaotang.springstorage.interceptor;
+package com.xiaotang.springorder2.interceptor;
 
 import com.xiaotang.commonpart.annotation.CreateTime;
 import com.xiaotang.commonpart.annotation.UUID;

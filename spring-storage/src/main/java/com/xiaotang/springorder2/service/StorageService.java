@@ -1,7 +1,7 @@
-package com.xiaotang.springstorage.service;
+package com.xiaotang.springorder2.service;
 
-import com.xiaotang.springstorage.dao.StorageMapper;
-import com.xiaotang.springstorage.model.Storage;
+import com.xiaotang.springorder2.dao.StorageMapper;
+import com.xiaotang.springorder2.model.Storage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

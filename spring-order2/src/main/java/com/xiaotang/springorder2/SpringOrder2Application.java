@@ -1,4 +1,4 @@
-package com.xiaotang.springstorage;
+package com.xiaotang.springorder2;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -8,11 +8,11 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @EnableDiscoveryClient
-@MapperScan("com.xiaotang.springstorage.dao")
-public class SpringStorageApplication {
+@MapperScan("com.xiaotang.springorder2.dao")
+public class SpringOrder2Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringStorageApplication.class, args);
+        SpringApplication.run(SpringOrder2Application.class, args);
     }
 
 }

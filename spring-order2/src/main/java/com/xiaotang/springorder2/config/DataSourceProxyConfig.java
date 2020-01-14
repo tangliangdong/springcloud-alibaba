@@ -1,7 +1,7 @@
-package com.xiaotang.springstorage.config;
+package com.xiaotang.springorder2.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.xiaotang.springstorage.interceptor.InsertInterceptor;
+import com.xiaotang.springorder2.interceptor.InsertInterceptor;
 import io.seata.rm.datasource.DataSourceProxy;
 import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;

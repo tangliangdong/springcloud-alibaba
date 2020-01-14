@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @data 2020/1/8
  * @time 17:22
  */
-@FeignClient("order-server")
+@FeignClient("order2-server")
 public interface OrdersClient {
 
     @PostMapping("/order/add")

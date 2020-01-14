@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.xiaotang</groupId>
-    <artifactId>spring-order</artifactId>
+    <artifactId>spring-storage</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-order</name>
+    <name>spring-storage</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

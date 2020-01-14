@@ -1,4 +1,4 @@
-package com.xiaotang.springstorage.model;
+package com.xiaotang.springorder2.model;
 
 import com.xiaotang.commonpart.annotation.CreateTime;
 import com.xiaotang.commonpart.annotation.UUID;

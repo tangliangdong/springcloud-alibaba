@@ -26,6 +26,7 @@
         <module>../spring-order</module>
         <module>../spring-account</module>
         <module>../spring-storage</module>
+        <module>../spring-order2</module>
     </modules>
 
     <dependencies>

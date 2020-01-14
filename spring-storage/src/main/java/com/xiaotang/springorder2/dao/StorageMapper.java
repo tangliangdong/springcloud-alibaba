@@ -1,6 +1,6 @@
-package com.xiaotang.springstorage.dao;
+package com.xiaotang.springorder2.dao;
 
-import com.xiaotang.springstorage.model.Storage;
+import com.xiaotang.springorder2.model.Storage;
 
 public interface StorageMapper {
     int deleteByPrimaryKey(String uuid);

@@ -1,7 +1,7 @@
-package com.xiaotang.springstorage.controller;
+package com.xiaotang.springorder2.controller;
 
-import com.xiaotang.springstorage.model.Storage;
-import com.xiaotang.springstorage.service.StorageService;
+import com.xiaotang.springorder2.model.Storage;
+import com.xiaotang.springorder2.service.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
