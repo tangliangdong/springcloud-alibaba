@@ -24,4 +24,10 @@ public class StorageService {
         return index;
     }
 
+    @Transactional
+    public Integer update(Storage storage){
+        Integer index = storageMapper.updateByPrimaryKeySelective(storage);
+//        throw new RuntimeException();
+        return index;
+    }
 }

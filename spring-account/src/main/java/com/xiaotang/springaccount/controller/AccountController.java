@@ -36,6 +36,11 @@ public class AccountController {
         return accountService.addTest(account, status);
     }
 
+    @PostMapping("updateTest")
+    public Integer updateTest(Account account, Integer status){
+        return accountService.updateTest(account, status);
+    }
+
     @PostMapping("order/add")
     public Integer add(String goodsName, Integer price, Integer num, String username){
         return ordersClient.add(goodsName, price, num, username);

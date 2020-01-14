@@ -19,6 +19,7 @@
         <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
         <spring-cloud-alibaba-dependencies.version>0.2.2.RELEASE</spring-cloud-alibaba-dependencies.version>
         <seata.version>1.0.0</seata.version>
+        <spring-cloud-alibaba-seata.version>2.1.1.RELEASE</spring-cloud-alibaba-seata.version>
     </properties>
 
     <dependencies>
@@ -97,7 +98,7 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-alibaba-seata</artifactId>
-            <version>2.1.0.RELEASE</version>
+            <version>${spring-cloud-alibaba-seata.version}</version>
         </dependency>
 
     </dependencies>

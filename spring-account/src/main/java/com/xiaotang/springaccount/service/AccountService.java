@@ -30,6 +30,22 @@ public class AccountService {
         return accountMapper.insert(account);
     }
 
+    public Integer update(Account account){
+        return accountMapper.updateByPrimaryKeySelective(account);
+    }
+
+    @GlobalTransactional
+    @Transactional
+    public Integer updateTest(Account account, Integer status){
+        Integer index = update(account);
+        ordersClient.update("a6ee33c562bf46739e59c0353912eefc", "apple23",2223);
+        storageClient.update("bc3a5eddb2e146a3b97a5b2e7a40582e", "apple2", 123);
+        if(status == 0){
+            throw new RuntimeException("hello world");
+        }
+        return index;
+    }
+
     @GlobalTransactional
     @Transactional(rollbackFor = Exception.class)
     public Integer addTest(Account account, Integer status){

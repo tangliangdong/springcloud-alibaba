@@ -30,4 +30,12 @@ public class OrdersService {
 //        throw new RuntimeException();
         return index;
     }
+
+    @Transactional(rollbackFor = Exception.class)
+    public Integer update(Orders orders){
+        Integer index = ordersMapper.updateByPrimaryKeySelective(orders);
+        System.out.println("你好世界");
+//        throw new RuntimeException();
+        return index;
+    }
 }

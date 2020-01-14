@@ -18,5 +18,8 @@ public interface OrdersClient {
     @PostMapping("/order/add")
     Integer add(@RequestParam("goodsName") String goodsName, @RequestParam("price") Integer price, @RequestParam("num") Integer num, @RequestParam("username") String username);
 
+    @PostMapping("/order/update")
+    Integer update(@RequestParam("uuid") String uuid, @RequestParam("goodsName") String goodsName, @RequestParam("price") Integer price);
+
 
 }

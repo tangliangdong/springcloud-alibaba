@@ -26,4 +26,13 @@ public class StorageController {
         storage.setNum(num);
         return storageService.add(storage);
     }
+
+    @PostMapping("update")
+    public Integer update(String uuid, String goodsName, Integer num){
+        Storage storage = new Storage();
+        storage.setUuid(uuid);
+        storage.setGoodsName(goodsName);
+        storage.setNum(num);
+        return storageService.update(storage);
+    }
 }

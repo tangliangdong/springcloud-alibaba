@@ -11,23 +11,21 @@ spring:
     # seata 服务分组，要与服务端nacos-config.txt中service.vgroup_mapping的后缀对应
     alibaba:
       seata:
-        tx-service-group: order-service-group
+        tx-service-group: account-service-group
   datasource:
-    url: jdbc:mysql://116.62.14.208:3306/order?useUnicode=true&amp;characterEncoding=utf8
+    url: jdbc:mysql://116.62.14.208:3306/order?characterEncoding=utf8
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: 123456
-  devtools:
-    livereload:
-      port: 35730
+#  devtools:
+#    livereload:
+#      port: 35730
 mybatis:
   mapper-locations: classpath:/mapper/*.xml
   type-aliases-package: com.xiaotang.springorder
 #  configuration:
 #    interceptors:
 #      - com.xiaotang.springorder.interceptor.InsertInterceptor
-
-
 
 logging:
   level:

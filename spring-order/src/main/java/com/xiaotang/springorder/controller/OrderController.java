@@ -38,4 +38,13 @@ public class OrderController {
         return ordersService.add(orders);
     }
 
+    @PostMapping("update")
+    public Integer update(String uuid, String goodsName, Integer price){
+        Orders orders = new Orders();
+        orders.setUuid(uuid);
+        orders.setGoodsName(goodsName);
+        orders.setPrice(price);
+        return ordersService.update(orders);
+    }
+
 }

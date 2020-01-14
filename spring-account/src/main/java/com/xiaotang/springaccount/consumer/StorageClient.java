@@ -14,4 +14,7 @@ public interface StorageClient {
 
     @PostMapping("/storage/add")
     Integer add(@RequestParam("goodsName") String goodsName, @RequestParam("num") Integer num);
+
+    @PostMapping("/storage/update")
+    Integer update(@RequestParam("uuid") String uuid, @RequestParam("goodsName") String goodsName, @RequestParam("num") Integer num);
 }
