@@ -10,7 +10,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @EnableFeignClients
 @EnableDiscoveryClient
-@MapperScan("com.xiaotang.springaccount.dao")
+//@MapperScan("com.xiaotang.springaccount.dao")
 public class SpringAccountApplication {
 
     public static void main(String[] args) {
