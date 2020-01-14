@@ -32,8 +32,8 @@ public class AccountController {
     }
 
     @PostMapping("addTest")
-    public Integer addTest(Account account){
-        return accountService.addTest(account);
+    public Integer addTest(Account account, Integer status){
+        return accountService.addTest(account, status);
     }
 
     @PostMapping("order/add")

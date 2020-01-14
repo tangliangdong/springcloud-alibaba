@@ -32,12 +32,14 @@ public class AccountService {
 
     @GlobalTransactional
     @Transactional(rollbackFor = Exception.class)
-    public Integer addTest(Account account){
+    public Integer addTest(Account account, Integer status){
 
         ordersClient.add("banana", 2, 1, account.getUsername());
         storageClient.add("apple", 3);
         Integer index = add(account);
-//        throw new RuntimeException("你好世界");
+        if(status == 0){
+            throw new RuntimeException("你好世界");
+        }
         return index;
     }
 }
