@@ -108,11 +108,6 @@
             <artifactId>spring-cloud-alibaba-seata</artifactId>
             <version>${spring-cloud-alibaba-seata.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.alibaba.boot</groupId>
-            <artifactId>nacos-config-spring-boot-starter</artifactId>
-            <version>0.2.2</version>
-        </dependency>
     </dependencies>
 
     <dependencyManagement>
