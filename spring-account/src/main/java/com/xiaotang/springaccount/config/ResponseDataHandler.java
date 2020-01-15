@@ -4,12 +4,16 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.xiaotang.springaccount.dto.ResponseBodyDTO;
 import org.springframework.core.MethodParameter;
+import org.springframework.http.HttpInputMessage;
 import org.springframework.http.MediaType;
+import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
+
+import java.lang.reflect.Type;
 
 /**
  * @author Administrator
@@ -33,6 +37,22 @@ public class ResponseDataHandler implements ResponseBodyAdvice {
 //        if(body == null){
 //            return new ResponseBodyDTO("");
 //        }
+//        if(! (body instanceof ResponseBodyDTO)){
+//            ResponseBodyDTO responseBodyDTO = new ResponseBodyDTO();
+//            responseBodyDTO.setCode(200);
+//            responseBodyDTO.setMsg("操作成功");
+//            responseBodyDTO.setSuccess(true);
+////            body = body ==null ? "":body;
+//            responseBodyDTO.setResult(body);
+//            body = responseBodyDTO;
+//        }
+
+        return body;
+    }
+
+    @Override
+    public Object afterBodyRead(Object body, HttpInputMessage inputMessage, MethodParameter parameter, Type targetType, Class<? extends HttpMessageConverter<?>> converterType) {
+        System.out.println("RequestBodyAdvice afterBodyRead");
         if(! (body instanceof ResponseBodyDTO)){
             ResponseBodyDTO responseBodyDTO = new ResponseBodyDTO();
             responseBodyDTO.setCode(200);
@@ -42,7 +62,6 @@ public class ResponseDataHandler implements ResponseBodyAdvice {
             responseBodyDTO.setResult(body);
             body = responseBodyDTO;
         }
-
         return body;
     }
 }

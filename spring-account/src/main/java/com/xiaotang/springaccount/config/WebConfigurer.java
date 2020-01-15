@@ -30,7 +30,7 @@ public class WebConfigurer implements WebMvcConfigurer {
 
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-        converters.add(0, new MappingJackson2HttpMessageConverter());
+//        converters.add(0, new MappingJackson2HttpMessageConverter());
         FastJsonHttpMessageConverter fastConverter = new FastJsonHttpMessageConverter();
 
         //2、添加fastjson的配置信息
@@ -40,7 +40,7 @@ public class WebConfigurer implements WebMvcConfigurer {
                 //    输出key是包含双引号
 //                SerializerFeature.QuoteFieldNames,
                 //    是否输出为null的字段,若为null 则显示该字段
-                SerializerFeature.WriteMapNullValue,
+//                SerializerFeature.WriteMapNullValue,
                 //    数值字段如果为null，则输出为0
                 SerializerFeature.WriteNullNumberAsZero,
                 //     List字段如果为null,输出为[],而非null
@@ -60,7 +60,7 @@ public class WebConfigurer implements WebMvcConfigurer {
 
         //3、在convert中添加配置信息
         fastConverter.setFastJsonConfig(fastJsonConfig);
-        converters.add(1, fastConverter);
+        converters.add(fastConverter);
     }
 
 }

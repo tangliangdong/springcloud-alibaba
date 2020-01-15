@@ -35,11 +35,16 @@ public class LoginController {
         List<String> list = new ArrayList<>();
         list.add("apple");
         list.add("banana");
-        return null;
+        return list;
     }
 
     @PostMapping("testarray2")
     public List testarray2(){
+        return null;
+    }
+
+    @PostMapping("testarray3")
+    public Boolean testarray3(){
         return null;
     }
 }
